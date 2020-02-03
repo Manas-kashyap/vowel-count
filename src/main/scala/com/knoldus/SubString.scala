@@ -16,7 +16,7 @@ class SubString {
     for(i<- 0 until s.length){
       val ch: Char = s.charAt(i)
 
-      if(ch == 'a' || ch == 'e' || ch== 'i' || ch == 'o' || ch =='u')
+      if(ch == 'a' || ch == 'e' || ch== 'i' || ch == 'o' || ch =='u' || ch == 'A' || ch == 'E' || ch== 'I' || ch == 'O' || ch =='U')
         y(0) = y(0) + x(i)
     }
     y(0)
