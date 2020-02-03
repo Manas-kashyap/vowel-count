@@ -1,31 +1,32 @@
 package com.knoldus
 
 class SubString {
-  def vowel(s: String): Int ={
+  def vowel(s: String): Int = {
     val x: Array[Int] = new Array[Int](s.length)
 
-    for(i<-0 until s.length){
-      if(i ==0)
+    for (i <- 0 until s.length) {
+      if (i == 0)
 
         x(i) = s.length
       else
-        x(i) = (s.length -i) + x(i-1) -i
+        x(i) = (s.length - i) + x(i - 1) - i
     }
     val y: Array[Int] = new Array[Int](1)
     y(0) = 0
-    for(i<- 0 until s.length){
+    for (i <- 0 until s.length) {
       val ch: Char = s.charAt(i)
 
-      if(ch == 'a' || ch == 'e' || ch== 'i' || ch == 'o' || ch =='u' || ch == 'A' || ch == 'E' || ch== 'I' || ch == 'O' || ch =='U')
+      if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
         y(0) = y(0) + x(i)
     }
     y(0)
 
   }
 }
-object SubString{
+
+object SubString {
   def main(args: Array[String]): Unit = {
-    val obj= new SubString()
+    val obj = new SubString()
     print(obj.vowel("manaskashyap"))
   }
 }
